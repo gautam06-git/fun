@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffe6f0;
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #ff0066;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            font-size: 20px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 20px;
+            position: absolute;
+        }
+
+        #yesBtn {
+            background-color: #4CAF50;
+            color: white;
+            position: static;
+        }
+
+        #noBtn {
+            background-color: #f44336;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Will You Marry Me? 💍❤️</h1>
+
+    <button id="yesBtn" class="btn" onclick="yesClicked()">Yes ❤️</button>
+    <button id="noBtn" class="btn">No 😢</button>
+
+    <script>
+        const noBtn = document.getElementById("noBtn");
+
+        noBtn.addEventListener("mouseover", function() {
+            const x = Math.random() * window.innerWidth - 100;
+            const y = Math.random() * window.innerHeight - 50;
+
+            noBtn.style.left = x + "px";
+            noBtn.style.top = y + "px";
+        });
+
+        function yesClicked() {
+            document.body.innerHTML = "<h1>Yayyyyy! ❤️ I Love You Forever 😍💍</h1>";
+        }
+    </script>
+
+</body>
+</html>
